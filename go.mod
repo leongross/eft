@@ -1,3 +1,3 @@
-module github.com/leongross/elf_to_shellcode
+module github.com/leongross/eft
 
 go 1.19

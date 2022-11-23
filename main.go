@@ -15,16 +15,16 @@ func ioReader(filePath string) (io.ReaderAt, error) {
 	return r, nil
 }
 
-func byte_to_escaped(b []byte) {
-	for _, nibble := range b {
-		fmt.Printf("\\x%02x", nibble)
+func byte_to_escaped(bytes []byte) {
+	for _, b := range bytes {
+		fmt.Printf("\\x%02x", b)
 	}
 	fmt.Println()
 }
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Printf("usage: %s <elf>", os.Args[0])
+		fmt.Printf("usage: %s <elf>\n", os.Args[0])
 		os.Exit(1)
 	}
 
